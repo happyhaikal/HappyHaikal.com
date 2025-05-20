@@ -1,0 +1,438 @@
+{% extends 'base_project.html' %}
+
+{% block intro %}
+<section id="about">
+    <div class="container">
+        <h2>SkyWatchHub</h2>
+        <p>
+            As part of an undergraduate module, Design Thinking and Innovation (DTI) at the Singapore University of Technology and 
+            Design, students were tasked to apply design tinking methodology to scope 
+            a problem and ideate a solution. For my year, the design project had to fall under 
+            the theme <strong>"creative interactions with light".</strong> Use of light in social interactions is an area of development
+            with potential for many innovations. Light interactions offer immense opportunities to deliver unique
+            forms of art and entertainment during day to day activities. 
+        </p>
+        
+        <div class="row">
+            <div class="column">
+                <h5>My Role</h5>
+                <p>Hardware lead, CAD Engineer</p>
+            </div>
+            <div class="column">
+                <h5>My Contribution</h5>
+                <p>CAD modelling, Posters and Project Video, Prototyping</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="column">
+                <h5>About the Team</h5>
+                <p>Team of 5</p>
+            </div>
+            <div class="column">
+                <h5>Year</h5>
+                <p>2024</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="column">
+                <h5>Platform</h5>
+                <p>Rhinoceros 3D, SolidWorks, Twinmotion, Adobe Illustrator</p>
+            </div>
+            <div class="column">
+                <h5>Time Frame</h5>
+                <p>1 Semester (14 weeks)</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block gallery %}
+<!-- Gallery -->
+<div class="photo-collage">
+    <div class="image-container">
+        <img src="static/project_3/plane_spot_location.gif" alt="Looping animation 1" />
+        <img src="static/project_3/renders2.jpg" alt="renders2" />
+    </div>
+
+    <div class="image-container">
+        <img src="static/project_3/critical_image.jpg" alt="renders2" />
+        <img src="static/project_3/site_model.gif" alt="Looping animation 2" />
+    </div>
+
+    <div class="image-container">
+        <img src="static/project_3/lights.gif" alt="Looping animation 3" />
+        <img src="static/project_3/location.gif" alt="Looping animation 4" />
+    </div>
+</div>
+<!-- Gallery -->
+{% endblock %}
+
+{% block section %}
+<!-- Programming and electronics works Section-->
+<section id="cad">
+    <div class="container">
+        <h2>Project Video</h2>
+        <p class="mt-3">
+            A 1-minute video that summarises the project....
+        </p>
+        <div class="content-wrapper">
+            <div class="visuals_vid">
+                <!-- Embedded YouTube Video (Responsive) -->
+                <iframe src="https://www.youtube.com/embed/82eyOMtLHkk"
+            frameborder="0"
+            allowfullscreen>
+             </iframe>
+            </div>
+            <div class="education">
+                <h5>Illustrates problem statement and implemented solution</h5>
+                <ul>
+                    <li>Graphics created using Twinmotion</li>
+                    <li>Created and edited by me :)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+   
+<!-- CAD Section-->
+<section id="cad"> 
+    <div class="container">
+        <h2>Design Thinking Process</h2>
+        <p class="mt-3">
+           For the entirety of the project, we implemented the <strong>Double Diamond Design Process</strong> design methodology: 
+           1) Discover, 2) Define, 3) Develop, and 4) Deliver. Each stage of our design process leading to our 
+           final prototype followed these 4 processess. 
+        </p>
+
+        <ol class="car_rule_list">
+            <li> <strong>Discover:</strong> Identify & understand
+                opportunities & needs
+                collaboratively through
+                co-creation with
+                stakeholders
+                with Empathy
+            </li>
+            <li> 
+                <strong>Define:</strong>
+                Interpret & reframe
+                needs & map them into
+                activities, functions &
+                representations
+                with Mindfulness            </li>
+            <li> 
+                <strong>Develop:</strong>
+                Ideate & model
+                concepts based on
+                identified opportunities
+                with Joyfulness
+            <li> 
+                <strong>Deliver:</strong>
+                Iteratively prototype &
+                test concepts & models
+                with users
+                with Non-Attachment
+            </li>
+            </ol>
+
+        <div class="content-wrapper">
+            <div class="education">
+                <h5>Double Diamond Design Process</h5>
+                <ul>
+                    <li>Popularised by
+                        British Design
+                        Council in 2005</li>
+                </ul>
+            </div>
+
+            <div class="visuals_car">
+                <div class="image-wrapper">
+                <img src="static/project_3/double_diamond.png" alt="Slide 2" class="fullscreen-img" />
+                <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="cad">
+    <div class="container">
+        <h2>Discover and Define Stage</h2>
+        <p class="mt-3">
+            During this stage, each group member worked individually, focusing
+             on 1) Site Analysis, 2) Interviewing Target
+            Users and Persona Creation, 3) crafting a "How Might We..." statement and 4) 
+            Journey Mapping. The location which I decided to focus on was the Plane 
+            Spotting Sites at Changi Business Park. The findings were then 
+            summarised into posters:
+        </p>
+        <div class="content-wrapper">
+            <div class="visuals_car">
+                <div class="image-wrapper">
+                <img src="static/project_3/Slide2.jpg" alt="Slide 2" class="fullscreen-img" />
+                <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+              </div>
+            </div>
+            <div class="education">
+                <h5>Site Analysis (Part 1) </h5>
+                <ul>
+                    <li>Highlights the different facilities around the site, footfall, vehicle
+                        movement, shadows throughout the day, activities, aeroplace path and 
+                        on-site features.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second content block: Image 2 & CAD Works -->
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="visuals_car">
+                <div class="image-wrapper">
+                    <img src="static/project_3/Slide1.jpg" alt="Slide 2" class="fullscreen-img" />
+                    <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+                  </div>
+            </div>
+            <div class="education">
+                <h5>
+                    Site Analysis (Part 2)
+                </h5>
+                <ul>
+                    <li>
+                        Personas, Design Goals, User-Journey and In-Depth Site
+                        Analysis using AEIOU (Activity, Environment, Interactions, Objects, Users)                   
+                    </li>
+                </ul>
+            </div> 
+        </div>
+        
+        <h5 style="margin-top: 30px;" >
+            My Problem Statement: 
+        </h5>
+        <p class="mt-3">
+            How might we <strong>enhance the plane spotting experience</strong> at CBP 
+            to attract both <strong>plane enthusiasts</strong> and the <strong>general 
+            public?</strong> 
+        </p>
+    </div>
+    </div>
+</section>
+
+<section id="cad">
+    <div class="container">
+        <h2>Develop Stage</h2>
+        <p class="mt-3">
+            This stage primarily focused on generating ideas based on the 'How Might We' 
+            statement. Our group ultimately chose my problem statement was selected 
+            as the one to pursue for the remainder of the project. We then individually did
+            1) Mindmaps, 2) Mood boards, 3) Contextualisation Drawings, 4) Storyboards and
+            5) Functional Diagrams as part of the idea generation process.
+
+        </p>
+        <div class="content-wrapper">
+            <div class="visuals_2">
+                <div class="image-wrapper">
+                    <img src="static/project_3//mindmap.jpg" alt="Slide 2" class="fullscreen-img" />
+                    <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+                  </div>
+                  <div class="image-wrapper">
+                    <img src="static/project_3/moodboard.jpg" alt="Slide 2" class="fullscreen-img" />
+                    <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+                  </div>
+        </div>
+
+            <div class="education">
+                <h5>Mindmap & Moodboard</h5>
+                <ul>
+                    <li>Aids in generating creative ideas, themes, appearance, tone and 
+                        feel of the final product/solution </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second content block: Image 2 & CAD Works -->
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="education">
+                <h5>Storyboard and Functional Diagram</h5>
+                <ul>
+                    <li>
+                        Storyboard visualises users interacting while functional diagram 
+                        illustrates the system of the product logically and technically
+                    </li>
+                </ul>
+            </div>
+
+            <div class="visuals_2">
+                <div class="image-wrapper">
+                    <img src="static/project_3/storyboard.jpg" alt="Slide 2" class="fullscreen-img" />
+                    <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+                </div>
+
+                <div class="image-wrapper">
+                    <img src="static/project_3/functional diagram.jpg" alt="Slide 2" class="fullscreen-img" />
+                    <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+                    </div>            
+                </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="visuals_car">
+                <div class="image-wrapper">
+                    <img src="static/project_3/context_drawing.jpg" alt="Slide 2" class="fullscreen-img" />
+                    <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+                </div>            
+            </div>
+
+            <div class="education">
+                <h5>Contextualisation Drawing</h5>
+                <ul>
+                    <li>Shows how the product/solutions fits into the intended enivironment/location, 
+                        considering scale, surroundings and intergration with context
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</section>
+
+    <section id="cad">
+        <div class="container">
+            <h2>Deliver Stage</h2>
+            <p class="mt-3">
+                This stage, done collectively as a group, focused on prototyping strategies,
+                user testing, itering based on feedback, pitching to market/stake holders and 
+                final implementation. For the course, we made a final pitch to our professors
+                in the form of a video (shown at top of the page), site model and our prototype.
+            </p>
+
+        <div class="content-wrapper">
+                <div class="visuals">
+                    <div class="image-wrapper">
+                        <img src="static/project_3/renders2.jpg" alt="Slide 2" class="fullscreen-img" />
+                        <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+                    </div>   
+                    <div class="image-wrapper">
+                        <img src="static/project_3/A1_poster_final.jpg" alt="Slide 2" class="fullscreen-img" />
+                        <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+                    </div>   
+            </div>
+    
+                <div class="education">
+                    <h5>Our Solution</h5>
+                    <ul>
+                        <li>A reimagined plane spotting site, with a light feature as the main attraction. The light feature
+                            allows users to interact with aviation-themed attractions as well as play aeroplane
+                            trivia test. It also glows a different colour to indicate when a plane is approaching.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second content block: Image 2 & CAD Works -->
+    <div class="container" style="margin-bottom: 2rem;">
+        <div class="content-wrapper">
+            <div class="education">
+                <h5>Twinmotion Model</h5>
+                <ul>
+                    <li>
+                       Recreation of actual site with implemented solution (to scale). Used graphics to
+                       create project video.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="visuals_vid">
+                <!-- Embedded YouTube Video (Responsive) -->
+                    <iframe src="https://youtube.com/embed/AS0N4mn_SI4"
+                frameborder="0"
+                allowfullscreen>
+                </iframe>
+            </div>
+
+        </div>
+    </div>
+    <!-- Second content block: Image 2 & CAD Works -->
+    <div class="container" style="margin-bottom: 2rem;">
+        <div class="content-wrapper">
+            <div class="visuals_400">
+                <div class="image-wrapper">
+                    <img src="static/project_3/lights_2.gif" alt="Slide 2" />
+                </div>   
+                <iframe src="static/project_3/Main Light Feature.html" ></iframe>    
+            </div>
+
+            <div class="education">
+                <h5>Prototype</h5>
+                <ul>
+                    <li>
+                        Developed a scaled-down prototype of 
+                        the main lighting feature and programmed the interactive, aviation-themed games 
+                        using Arduino, electronics and web-based applications.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second content block: Image 2 & CAD Works -->
+    <div class="container" style="margin-bottom: 2rem;">
+        <div class="content-wrapper">
+            <div class="education">
+                <h5>Site Model</h5>
+                <ul>
+                    <li>Scaled down to a 1:125 scale. Shows our implementation of the solution 
+                        at actual site. STL files created using Rhinoceros 3D.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="visuals_400">
+                <div class="image-wrapper">
+                    <img src="static/project_3/site_model_1.jpg" alt="Slide 2" class="fullscreen-img" />
+                    <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+                </div>                   
+                
+                <div class="image-wrapper">
+                    <img src="static/project_3/site_model_2.jpg" alt="Slide 2" class="fullscreen-img" />
+                    <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+                </div>   
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block navigation %}
+<!-- Navigation Section -->
+<section id="navigation-section" class="py-5">
+    <div class="container">
+        <!-- Back to Top Button (Above the Left and Right Buttons) -->
+        <div class="col-4 mb-4">
+
+            <a href="#top" class="btn custom-btn-left back-to-top">
+                ↑ Back to Top
+            </a>
+        </div>
+           <!-- Navigation Buttons (Left and Right) -->
+           <div class="navigation-buttons d-flex justify-content-between">
+            <a href="{{ url_for('views.project_2') }}#top" class="btn custom-btn-left">
+                ← Mechanical Toy Car
+            </a>
+            <a href="{{ url_for('views.project_4') }}#top" class="btn custom-btn-right">
+                Omni-Node →
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

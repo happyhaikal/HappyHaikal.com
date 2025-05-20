@@ -1,0 +1,853 @@
+
+        /* Global Styling */
+       html, body {
+            height: 100%; /* Full height for the page */
+            background: linear-gradient(to bottom right, #ffffff 50%,  #e3e0e9 75%, #c3c3dd 100%); /* Gradient background */
+            background-attachment: fixed; /* Fix background during scrolling */
+            margin: 0; /* Remove default margins */
+            width: 100%;
+            font-family: 'Poppins', sans-serif; /* Default font */
+        }
+
+        
+        .navbar, .content-section {
+            margin: 100px; /* Add padding for spacing */
+            scroll-margin-top: 90px;
+        }
+
+        /* Top Navbar Styling */
+        .side-navbar {
+            width: 100%; /* Full-width navbar */
+            height: auto; 
+            position: fixed; /* Fixed position for sticky navbar */
+            top: 0;
+            left: 0;
+            background-color: #ffffff; /* White background for the navbar */
+            color: rgb(12, 11, 11); /* Dark text */
+            padding: 20px 20px; /* Padding inside navbar */
+            z-index: 1050; /* Ensure navbar is above other content */
+            display: flex; /* Flexbox for layout */
+            align-items: center;
+            justify-content: space-between; /* Space between items */
+            
+        }
+
+        /* Logo Container Styling */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }    
+
+        /* Logo Image Styling */
+        .logo-container img {
+            width: 150px; /* Set width of logo */
+            height: auto; /* Keep aspect ratio */
+            margin-right: 20px; /* Space between logo and nav items */
+        }
+
+        /* Navbar Link Styling */
+        .side-navbar a {
+            color: rgb(3, 3, 3); /* Text color */
+            text-decoration: none; /* Remove underlines */
+            padding: 10px 12px; /* Padding for clickable area */
+            font-size: 1.3rem; /* Font size */
+            font-weight: 500; /* Font weight */
+            margin: 0 4px; /* Margin between links */
+        }
+
+        /* Navbar Hover Effect */
+        .side-navbar .nav-links a:hover {
+            background-color: #b0bbc7; /* Hover background */
+            border-radius: 5px; /* Rounded corners on hover */
+        }
+
+                * {
+        box-sizing: border-box;
+        }
+
+        body {
+        overflow-x: hidden;
+        }
+
+        /* Content Section Padding */
+        .content {
+            padding: 20px; /* Padding inside content */
+            align-items: center;
+        }
+
+        /* Hamburger Menu (for small screens) */
+        .hamburger {
+            display: none; /* Hidden by default */
+            color: rgb(7, 7, 7); /* Text color */
+            border: none;
+            padding: 30px 15px; /* Padding for clickable area */
+            cursor: pointer; /* Pointer cursor */
+            border-radius: 5px;
+            position: fixed; /* Fixed position */
+            top: 15px; /* Distance from top */
+            right: 10px; /* Distance from right */
+            z-index: 1051; /* Ensure it is above navbar */
+            font-size: 30px; /* Larger font size */
+            background: transparent; /* No background */
+        }
+
+        /* Mobile Styling (below 991px) */
+        @media (max-width: 991px) {
+            .hamburger {
+                display: block; /* Show hamburger menu */
+            }
+
+            /* Side Navbar Styling for Small Screens */
+            .side-navbar {
+                flex-direction: column; /* Stack items vertically */
+                align-items: flex-start; /* Align to the left */
+            }
+
+            /* Hide Navbar Links Initially */
+            .nav-links {
+                display: none; /* Hide links */
+                flex-direction: column; /* Stack links vertically */
+                width: 100%;
+                margin-top: 10px; /* Space between navbar and links */
+            }
+
+            /* Show Navbar Links when .open is added */
+            .side-navbar.open .nav-links {
+                display: flex; /* Show links */
+            }
+
+            /* Adjust Content Section for Small Screens */
+            .content {
+                margin-top: 50px; /* More space to account for navbar */
+                align-items: center;
+            }
+        }
+
+       
+        /* About Section Styling */
+        .container {
+            width: 100%;
+            max-width: 1250px;
+            margin-top: 170px; /* Add more space below the back button */
+            padding-left: 40px;
+            padding-right:40px;
+        }
+        
+        .back-button-container {
+            margin-bottom: 0px;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 0;
+            position: relative;
+            top: 150px;
+            left: 20px;
+        }
+        
+        .back-button-container a {
+            text-decoration: none;
+            color: #000000;
+            border: 1px solid #000000;
+            padding: 8px 12px;
+            display: inline-block;
+            border-radius: 5px;
+            font-size: 16px;
+            white-space: nowrap;
+            background-color: white;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .back-button-container a:hover {
+            background-color: #333;
+            color: white;
+        }
+        
+        h2 {
+            text-align: left;
+            margin-bottom: 10px;
+            font-weight: bold; /* Ensure it's bold */
+        }
+
+        h5 {
+            font-weight: bold; /* Ensure it's bold */
+            font-size: 25px;
+        }
+
+        p {
+            text-align: left;
+            margin-bottom: 15px;
+            margin-top: 0px;
+            font-size: 20px;
+        }
+        
+        li{
+            font-size: 20px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .column {
+            width: 48%;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .row {
+                flex-direction: column;
+                justify-content: space-between;
+         
+                margin-top: 0px;
+            }
+            .column {
+                width: 100%;
+            }
+        }
+
+        /* Gallery container */
+        .photo-collage {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);  /* 3 columns by default */
+            gap: 10px;  /* Space between images */
+            max-width: 1200px;  /* Cap the maximum width of the photo collage */
+            margin: 40px auto;  /* Add top and bottom margins */
+            padding: 0 10px;  /* Padding for smaller screens */
+        }
+
+        /* Image container inside the gallery */
+        .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Image Styling */
+        .photo-collage img {
+            width: 100%;  /* Ensure images fill the container horizontally */
+            height: auto;  /* Maintain aspect ratio */
+            object-fit: cover;  /* Cover the container */
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: block;  /* Prevent inline-block behavior */
+        }
+
+        /* Responsive Adjustments for Smaller Screens */
+        @media (max-width: 1024px) {
+            .photo-collage {
+                grid-template-columns: repeat(3, 1fr);  /* 3 columns on medium screens */
+                padding: 20px 5%;  /* Reduce side padding */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .photo-collage {
+                grid-template-columns: repeat(3, 1fr);  /* Maintain 3 columns on smaller screens */
+                padding: 20px 5%;  /* Keep padding reasonable */
+            }
+
+            .photo-collage img {
+                max-width: 100%;  /* Ensure images scale well */
+            }
+        }
+
+        @media (max-width: 500px) {
+            .photo-collage {
+                grid-template-columns: 1fr;  /* 1 column on small screens */
+                padding: 20px 10px;  /* Further reduce padding */
+            }
+
+            .photo-collage img {
+                max-width: 100%;  /* Allow images to take full width */
+            }
+        }
+
+        #car_showcase .content-wrapper {
+            display: flex;
+            width: 100%; /* Ensure full width */
+            align-items: center; /* Aligns vertically */
+            justify-content: center; /* Centers horizontally */
+            margin-top: 2rem; /* Matches Bootstrap's margin */
+        }
+
+        #car_showcase .visuals {
+            flex: 2;
+            display: flex;
+            align-items: center;
+            width: 100%; /* Ensure full width */
+            justify-content: center; /* Centers the image and STL viewer */
+            gap: 20px; /* Space between image and STL viewer */
+        }
+
+        /* Image styling */
+        #car_showcase .visuals img {
+            width: 450px;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+
+        /* CAD section Styling */
+        #cad, #programming, #testimonial{
+            position: relative;
+            margin-top: 0px;
+            border-radius: 12px;
+            padding: 50px 0px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.05);
+            font-family: 'Poppins', sans-serif;
+            min-height: 600px;
+            height: auto;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* example cad section */
+        /* Container width to match Bootstrap */
+        #cad .container {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        #programming .container{
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        #testimonial .container {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        /* Flexbox layout for content positioning */
+        .content-wrapper, .content-wrapper_testimonial {
+            display: flex;
+            width: 100%; /* Ensure full width */
+            align-items: center; /* Aligns vertically */
+            justify-content: center; /* Centers horizontally */
+            margin-top: 2rem; /* Matches Bootstrap's margin */
+        }
+
+        /* Education section */
+        .education {
+            flex: 2; 
+            min-width: 220px;
+            text-align: center;
+            margin: 0 10px ; /* Adds equal margin on both sides */
+        }
+
+        .education ul {
+            padding-left: 20px; /* Adjust the indentation of the list */
+            padding-right: 20px;     /* Add spacing on the right */
+            list-style-position: inside; /* Move the bullet points inside the list */
+        }
+
+        .education li {
+            margin: 0; /* Remove any extra margins */
+            padding-left: 5px; /* Adjust padding to bring the text closer to the bullet */
+            padding-right: 20px;     /* Add spacing on the right */
+        }
+
+        /* Visual section */                                 
+        .visuals {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            width: 100%; /* Ensure full width */
+            justify-content: center; /* Centers the image and STL viewer */
+            gap: 15px; /* Space between image and STL viewer */
+        }
+
+        .visuals_2, .visuals_car, .visuals_400 {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            width: 100%; /* Ensure full width */
+            justify-content: center; /* Centers the image and STL viewer */
+            gap: 15px; /* Space between image and STL viewer */
+        }
+
+        /* Image styling */
+        .visuals img {
+            width: 300px;
+            height: 350px;
+            border-radius: 5px;
+        }
+
+        .visuals_2 img {
+            width: 300px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .visuals_car img {
+            width: 500px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .visuals_400 img{
+            width: 360px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .visuals_400 iframe{
+            width: 360px;
+            height: 280px;
+            border-radius: 5px;
+        }
+
+        /* STL Viewer container */
+        #stl_cont {
+            width: 200px;
+            height: 350px;
+            background-color: #f3f3f3; /* Placeholder */
+            border-radius: 5px;
+        }
+
+        .visuals iframe{
+            width: 300px;
+            height: 350px;
+            background-color: #f3f3f3; /* Placeholder */
+            border-radius: 5px;
+        }    
+
+        .visuals_vid iframe{
+            width: 600px;
+            height: 350px;
+            background-color: #f3f3f3; /* Placeholder */
+            border-radius: 5px;
+        }
+
+        li_testimonial{
+            font-size: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1080px) {
+            .content-wrapper, .content-wrapper_testimonial {
+                flex-direction: column;
+                text-align: center;
+                width: 90%;  /* Adjust width to prevent full stretch */
+                align-items: center; /* Centers items horizontally */
+                justify-content: center; /* Centers items vertically */ 
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            .education {
+                order: 1;
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .visuals, .visuals_2, .visuals_car, .visuals_vid, .visuals_400 {
+                order: 2;
+                display: flex;
+                flex-direction: row; /* Ensures image & STL viewer stay in a row */
+                justify-content: center;
+                gap: 15px;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .visuals img, #stl_cont, .visuals iframe, .visuals_2 img, 
+            .visuals_car img ,.visuals_vid iframe, .visuals_400 img, .visuals_400 iframe
+             {
+                max-width: 100%;
+            }
+
+            li_testimonial{
+                font-size: 19px;
+            }
+        }
+
+    @media (max-width: 930px) {
+        .content-wrapper_testimonial {
+            flex-direction: column;
+            align-items: center; /* Centers items horizontally */
+            justify-content: center; /* Centers items vertically */ 
+            text-align: center;
+        }
+        .visuals_2, .visuals_car, .visuals_400 {
+            order: 2;
+            flex-direction: column;
+            align-items: center; /* Centers items horizontally */
+            justify-content: center; /* Centers items vertically */ 
+            align-items: center;
+        }
+
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 620px) {
+        .content-wrapper, .content-wrapper_testimonial {
+            flex-direction: column;
+            align-items: center; /* Centers items horizontally */
+            justify-content: center; /* Centers items vertically */ 
+            text-align: center;
+        }
+
+        .education {
+            order: 1;
+            flex-direction: column;
+            align-items: center; /* Centers items horizontally */
+            justify-content: center; /* Centers items vertically */ 
+            text-align: center;
+        }
+
+        .visuals, .visuals_2, .visuals_car, .visuals_vid iframe, .visuals_400 img, .visuals_400 iframe
+         {
+            order: 2;
+            flex-direction: column;
+            align-items: center; /* Centers items horizontally */
+            justify-content: center; /* Centers items vertically */ 
+            align-items: center;
+        }
+
+        .visuals img,.visuals_2 img, .visuals_car, #stl_cont, .visuals iframe,
+        .visuals_vid iframe, .visuals_400 img, .visuals_400 iframe
+        {
+            max-width: 100%;
+        }
+    }
+
+        /* Responsive adjustments */
+        @media (max-width: 400px) {
+        .content-wrapper, .content-wrapper_testimonial {
+            flex-direction: column;
+            align-items: center; /* Centers items horizontally */
+            justify-content: center; /* Centers items vertically */ 
+            text-align: center;
+                   }
+
+        .education {
+            min-width: 300px;
+            flex-direction: column;
+            align-items: center; /* Centers items horizontally */
+            justify-content: center; /* Centers items vertically */ 
+            text-align: center;
+        }
+
+        .visuals , .visuals_2, .visuals_car, .visuals_vid iframe, .visuals_400 img, .visuals_400 iframe
+        {
+            flex-direction: column;
+            align-items: center; /* Centers items horizontally */
+            justify-content: center; /* Centers items vertically */ 
+            align-items: center;
+                }
+
+        .visuals img, .visuals_2 img,.visuals_car img, #stl_cont, .visuals iframe
+        .visuals_vid iframe, .visuals_400 img, .visuals_400 iframe
+        {
+            max-width: 100%;
+               }
+               .visuals img {
+                width: 220px;
+                height: 300px;
+                border-radius: 5px;
+            }
+            .visuals_2 img {
+                width: 400px;
+                height: auto;
+                border-radius: 5px;
+            }
+            .visuals_car img {
+                width: 300px;
+                height: auto;
+                border-radius: 5px;
+            }
+            .visuals iframe, .visuals_vid iframe{
+                width: 220px;
+                height: 300px;
+                background-color: #f3f3f3; /* Placeholder */
+                border-radius: 5px;
+            }    
+            .visuals_400 img, .visuals_400 iframe{
+                width: 300px;
+                height: auto;
+                border-radius: 5px;
+            }
+    }
+
+    .image-wrapper {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .fullscreen-btn {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 4px 8px;
+        cursor: pointer;
+        font-size: 1.1rem;
+      }
+      
+      .fullscreen-overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0; left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .fullscreen-overlay.active {
+        display: flex;
+      }
+      
+      .fullscreen-overlay img {
+        max-width: 90%;
+        max-height: 90%;
+        border: 4px solid white;
+        border-radius: 8px;
+      }
+      
+      .fullscreen-overlay::after {
+        content: '✕';
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+      }      
+
+      .fullscreen-overlay img.zoomable {
+        transform-origin: center center;
+        transition: transform 0.2s ease;
+        cursor: zoom-in;
+      }
+      
+    /* Custom Button Colors */
+    .custom-btn-left, .custom-btn-right {
+        background-color: #ffffff;  /* Custom Blue */
+        border: none;  /* Remove border */
+        font-size: 18px;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        width: 400px;  /* Set button width to 50% of the parent column */
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .custom-btn-left:hover,  .custom-btn-right:hover {
+        background-color: #cccfd1;  /* Darker blue on hover */
+    }
+
+    /* Text Color Change */
+    .custom-btn-left, .custom-btn-right {
+        color: #000000;  /* Text color set to white */
+    }
+
+    /* Button Styles */
+    .btn {
+        font-weight: bold;
+    }
+
+    
+    /* Styling for Back to Top Button (Aligned Above Navigation Buttons) */
+    .back-to-top {
+        background-color: #ffffff;  /* Custom Blue */
+        color: white;  /* White text */
+        border: none;
+        padding: 12px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        text-align: center;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+        width: 200px;
+        /* Positioning the button above the left and right buttons */
+        position: absolute;  /* Position it relative to the parent container */
+        top: -70px;  /* Adjust this value to position it above the buttons */
+        right: 40px;  /* Align it to the right of the parent container */
+    }
+
+    .back-to-top{
+        color: #000000;  /* Text color set to white */
+    }
+
+    .back-to-top:hover {
+        background-color: #cccfd1;  /* Darker blue on hover */
+    }
+
+    /* Add some margin between the top button and the navigation buttons */
+    .mb-4 {
+        margin-bottom: 1.5rem;  /* Add margin below the Back to Top button */
+    }
+
+    /* Ensure container has enough space for all elements */
+    .container {
+        position: relative;
+    }
+
+/* Media Query for Small Screens */
+@media (max-width: 900px) {
+
+    .custom-btn-left, .custom-btn-right {
+        width: 98%;  /* Make buttons full width on small screens */
+        font-size: 16px;  /* Adjust font size for smaller screens */
+        padding: 3px 0px;  /* Reduce padding to fit content */
+    }
+
+    /* Layout for Navigation Buttons */
+    .navigation-buttons {
+        gap: 10px;                   /* Adds gap between the buttons */
+    }
+
+    .back-to-top {
+        width: 150px;  /* Adjust width for small screens */
+        font-size: 16px;  /* Smaller font size */
+        top: -50px;  /* Adjust positioning */
+    }
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 500px) {
+
+.custom-btn-left, .custom-btn-right {
+    width: 90%;  /* Make buttons full width on small screens */
+    font-size: 13px;  /* Adjust font size for smaller screens */
+    padding: 6px 0px;  /* Reduce padding to fit content */
+}
+
+.back-to-top {
+    width: 150px;  /* Adjust width for small screens */
+    font-size: 16px;  /* Smaller font size */
+    top: -50px;  /* Adjust positioning */
+}
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 280px) {
+
+.custom-btn-left, .custom-btn-right {
+    width: 90%;  /* Make buttons full width on small screens */
+    font-size: 13px;  /* Adjust font size for smaller screens */
+    padding: 6px 0px;  /* Reduce padding to fit content */
+}
+
+.back-to-top {
+    width: 150px;  /* Adjust width for small screens */
+    font-size: 16px;  /* Smaller font size */
+    top: -50px;  /* Adjust positioning */
+}
+
+.navigation-buttons {
+    display: flex;                /* Using Flexbox */
+    justify-content: space-between;  /* Ensures space between buttons */
+    gap: 10px;                   /* Adds gap between the buttons */
+    flex-wrap: wrap;              /* Allows buttons to wrap to next line on small screens */
+}
+}
+
+
+
+/* General Styles for Contact Section */
+.contact-section {
+    padding: 5rem 0; /* Equivalent to py-5 */
+    text-align: center; /* Center text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-container {
+    max-width: 800px; /* Limit width */
+}
+
+/* Styles for Social Icons Section */
+.social-icons {
+    display: flex; /* Flex container */
+    justify-content: center; /* Center icons horizontally */
+    gap: 20px; /* Space between icons */
+    margin-top: 20px; /* Space between heading and icons */
+}
+
+/* Individual Icon Button */
+.icon-btn {
+    font-size: 1.1rem; /* Set size for icons */
+    color: #000; /* Set icon color */
+    text-decoration: none;
+}
+
+.icon-btn2{
+    font-size: 1.1rem; /* Set size for icons */
+    color: #000; /* Set icon color */
+    text-decoration: none;
+}
+
+/* Hover Effect for Icons */
+.icon-btn:hover, .icon-btn2:hover {
+    transition: transform 0.2s ease;
+    transform: scale(1.1); /* Slightly increases size on hover */
+}
+
+footer {
+    color: rgb(0, 0, 0);            /* White text */
+    text-align: center;      /* Centered text */
+    padding: 15px 0;         /* Padding for spacing */
+    font-size: 14px;         /* Adjust font size */
+    position: relative;         /* Stick to the bottom */
+    width: 100%;             /* Full width */
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer p {
+    margin: 10px auto;
+    display: flex;
+    text-align: center;      /* Centered text */
+
+}
+
+.responsive-image {
+    height: 660px;          /* Fixed height for large screens */
+    max-width: 100%;        /* Prevents horizontal overflow */
+    object-fit: cover;      /* Keeps image nicely cropped if needed */
+  }
+  
+  @media (max-width: 768px) {
+    .responsive-image {
+      height: 200px;        /* Reduce height for tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .responsive-image {
+      height: 150px;        /* Reduce height further for mobile */
+    }
+  }

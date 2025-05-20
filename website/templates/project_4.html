@@ -1,0 +1,549 @@
+{% extends 'base_project.html' %}
+
+{% block intro %}
+<section id="about">
+    <div class="container">
+        <h2>Omni-Node</h2>
+        <p>
+            Part of a cross‑module project, our team selected the challenge to 
+            “Develop a <strong>modular, self‑powered IoT sensor</strong> for forest monitoring.” 
+            Building on that brief, we designed a <strong>hybrid power solution—combining 
+            a small solar panel with piezoelectric energy</strong> harvesting—to keep our 
+            sensor running continuously in remote environments. 
+        </p>
+        
+        <div class="row">
+            <div class="column">
+                <h5>My Role</h5>
+                <p>Electrical engineer</p>
+            </div>
+            <div class="column">
+                <h5>My Contribution</h5>
+                <p>Concept and Design of Solution, Electronic Circuity, Project Video</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="column">
+                <h5>About the Team</h5>
+                <p>Team of 8</p>
+            </div>
+            <div class="column">
+                <h5>Year</h5>
+                <p>2025</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="column">
+                <h5>Platform</h5>
+                <p>ESP32, C++, Fusion360</p>
+            </div>
+            <div class="column">
+                <h5>Time Frame</h5>
+                <p>1 semester (14 weeks)</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block gallery %}
+<!-- Gallery -->
+<div class="photo-collage">
+    <div class="image-container">
+        <img src="static/project_4/omni_5.gif" alt="renders2" />
+        <img src="static/project_4/omni_3.gif" alt="Looping animation 1" />
+    </div>
+
+    <div class="image-container">
+        <img src="static/project_4/omni_node_1.jpg" alt="renders2" />
+        <img src="static/project_4/omni_7.gif" alt="Looping animation 1" />
+    </div>
+
+    <div class="image-container">
+        <img src="static/project_4/omni_4.gif" alt="Looping animation 1" />
+        <img src="static/project_4/omni_test.gif" alt="Looping animation 1" />
+    </div>
+</div>
+<!-- Gallery -->
+{% endblock %}
+
+{% block section %}
+
+<!-- Programming and electronics works Section-->
+<section id="cad">
+    <div class="container">
+        <h2>Project Video</h2>
+        <p class="mt-3">
+            A 30-second video summarising the project...  
+        </p>
+        <div class="content-wrapper">
+            <div class="visuals_vid">
+                <!-- Embedded YouTube Video (Responsive) -->
+                <iframe src="https://youtube.com/embed/4f8oEaGxVP0"
+                frameborder="0"
+            allowfullscreen>
+             </iframe>
+            </div>
+            <div class="education">
+                <h5>Illustrates problem statement and implemented solution</h5>
+                <ul>
+                    <li>Played during project presentaion to professors</li>
+                    <li>Created and edited by me :)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="cad">
+    <div class="container">
+        <h2>Background on forest monitoring IoT sensors</h2>
+        <p class="mt-3">
+            IoT sensors are used in forests for <strong>Digital Measurement, Reporting, 
+            and Verification (dMRV),</strong> automating the collection and 
+            processing of environmental data. However, three main issues arise:
+        </p>
+        <ol class="car_rule_list">
+            <li> Battery-powered sensors require <strong>periodic battery replacement,</strong> 
+                which is difficult in remote locations.
+            </li>
+            <li> 
+                Most IoT systems 
+            <strong>lack modularity</strong> — if one component fails, the entire system may 
+            need replacement. 
+            <li> 
+                Since many IoT sensors will be deployed 
+            in the forest, it is important to use <strong>sustainable materials and 
+            minimize reliance on lithium-ion batteries</strong> to reduce environmental 
+            impact.
+            </li>
+        </ol>
+
+        <h5 style="margin-top: 30px;" >
+            Problem Statement: 
+        </h5>
+        <p class="mt-3">
+            How might we <strong> develop a reliable, low-power, and environmentally 
+            sustainable sensor node,</strong> while offering <strong>
+            modularity</strong> for different sensor types? 
+        </p>
+
+        <div class="content-wrapper">
+            <div class="education">
+                <h5>Forest monitoring IoT sensors</h5>
+                <ul>
+                    <li>Some examples of IoT sensors in the market</li>
+                    <li>Pictures from: </li>
+                </ul>
+            </div>
+
+            <div class="visuals_car">
+                <div class="image-wrapper">
+                    <img src="static/project_4/sensors.gif" alt="Slide 2" />
+                  </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Programming and electronics works Section-->
+<section id="cad">
+    <div class="container">
+        <h2>Our Implemented Design</h2>
+        <p class="mt-3">
+            The main aim for our group was to innovate a solution that adresses the 3 points
+            mentioned above, ensure that the IoT sensor is self-powered, modular and enviromentally
+            sustainable. Our final solution, Omni-Node can be <strong>classified into 3 main 
+            features:</strong>
+        </p>
+        <ol class="car_rule_list">
+            <li><strong>Robustness:</strong> To operate reliably in harsh 
+                environmental conditions, such as low sunlight, we incorporate 
+                2 power sources—solar and piezoelectric—and optimise the microcontroller 
+                unit (MCU) for low power consumption by refining the code and enabling 
+                deep sleep modes.
+            </li>
+            <li> 
+            <strong>Modularity:</strong> To allow for seamless integration of various types 
+            of sensor based on specific application needs.
+            </li>
+            <li> 
+            <strong>Battery Sustainability: </strong>
+            To use supercapacitors for a significantly longer 
+            lifecycle and improved environmental friendliness.
+            </li>
+        </ol>
+
+        <div class="content-wrapper">
+            <div class="visuals">
+                <img src="static/project_4/final_omni.gif" alt="Looping animation 3" />
+                <div class="image-wrapper">
+                    <img src="static/project_4/omni_poster.jpg" alt="Slide 2" class="fullscreen-img" />
+                    <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+                  </div>
+            </div>
+
+            <div class="education">
+                <h5>Final prototype</h5>
+                <ul>
+                    <li>Uses Solar panels, Piezo discs, ESP32, LoRaWan modules, 
+                        BME280 Sensor (measures temperature, pressure and humidity) </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second content block: Image 2 & CAD Works -->
+    <div class="container">
+    <div class="content-wrapper">
+        <div class="education">
+            <h5>IoT sensor in operation</h5>
+            <ul>
+                <li>Powered by Solar Panel and Piezo discs</li>
+                <li>Our presention booth on project showcase day</li>
+            </ul>
+        </div>
+
+        <div class="visuals">
+            <img src="static/project_4/dashboard.gif" alt="Looping animation 5" />
+            <img src="static/project_4/booth.gif" alt="Looping animation 5" />
+        </div>
+    </div>
+</div>
+</div>
+
+</section>
+<!-- Programming and electronics works Section-->
+<section id="cad">
+    <div class="container">
+        <h2>How Omni-Node works</h2>
+        <p class="mt-3">
+            The system of Omni-Node operates through four key stages:
+        </p>
+
+        <ol class="car_rule_list">
+            <li><strong>Energy Harvesting:</strong> 
+                Captures ambient power via solar panels 
+                and piezoelectric elements.
+            </li>
+            <li> 
+            <strong>Energy Storage:</strong> Buffers harvested energy in a 
+            rechargeable battery or supercapacitor to 
+            ensure continuous operation.
+        
+            </li>
+            <li> 
+            <strong>IoT Sensing & Data Management: </strong>
+            Powers onboard sensors and a wireless module to collect, 
+            process, and transmit environmental data.
+            </li>
+        
+            <li> 
+                <strong>Enclosure & Form Factor:</strong>
+                Integrates all components into a rugged, weather‑resistant 
+                housing designed for easy deployment in forest environments.
+                </li>
+        </ol>
+
+        <div class="content-wrapper">
+            <div class="visuals_car">
+                <div class="image-wrapper">
+                    <img src="static/project_4/sketches_omni.gif" alt="Slide 2" class="fullscreen-img" />
+                    <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+                  </div>
+            </div>
+
+            <div class="education">
+                <h5>First drawing drafts of Omni-Node</h5>
+                <ul>
+                    <li>Sketches of sensor case design, circuitry, piezo housing</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial-->
+<section id="cad">
+    <div class="container">
+        <h2>Energy Harvesting and Storage</h2>
+        <p class="mt-3">
+            The energy harvesting and storage for Omni-Node is made of 3 
+            main components, the  1) Solar Energy system, the 
+            2) Piezo energy system, and 
+            3) Power Multiplexer. 
+        </p>
+
+        <h5 style="margin-top: 30px;" >
+        1) Solar Energy System: 
+        </h5>
+        <p class="mt-3">
+            The solar energy system follows the usual Solar Panel, Solar Charge Controller 
+            and Battery configuration. The battery which is charged by the solar panel 
+            is bucked down (using XL6009 Buck-Boost) then routed to a power multiplexer.
+        </p>
+
+        <div class="content-wrapper">
+            <div class="education">
+                <h5>Solar Energy System</h5>
+                <ul>
+                    <li>
+                        Made up of Solar Panel, Charge Controller and Battery
+                    </li>
+                </ul>
+            </div>
+            <div class="visuals_car">
+                <img src="static/project_4/solar_solder.gif" alt="Looping animation 5" />
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container">
+        <h5 style="margin-top: 30px;" > 
+        2) Piezo Energy System:
+        </h5>
+
+        <p class="mt-3">
+            The energy harvesting system consists of piezoelectric discs, an 
+            LTC3588 energy harvesting board, a 1N5817 Schottky diode, 
+            a resistor, three 5.5V 1F supercapacitors, and an MT3608 
+            buck converter. The piezo discs are connected in 
+            parallel to maximize current output. Their AC signal 
+            is routed to the LTC3588 board, which efficiently 
+            rectifies the input (AC to DC) and regulates the 
+            voltage to 3.3V. This regulated output is used to 
+            charge the supercapacitors. Finally, the stored 
+            energy from the supercapacitors is stepped down via 
+            the MT3608 buck converter and directed to power 
+            multiplexer.
+        </p>
+
+        <div class="content-wrapper">
+            <div class="visuals_400">
+                <img src="static/project_4/piezo_testing_2.gif" alt="Looping animation 5" />
+                <img src="static/project_4/piezo_testing_1.gif" alt="Looping animation 5" />
+            </div>
+
+            <div class="education">
+                <h5>Testing of Piezos</h5>
+                <ul>
+                    <li>First stages of testing how much voltage and current
+                        one piezo disc could generate
+                    </li>
+                    <li>
+                        1 disc generates 3-8v but a low current of 0.1mA.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+                <div class="education">
+                    <h5>Piezos Implemented</h5>
+                    <ul>
+                        <li>
+                            As the tree branch sways or oscillates, the inertia of 
+                            the attached rod induces deflection in the piezo disc. This 
+                            mechanical strain produces electrical energy via the 
+                            piezoelectric effect.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="visuals_400">
+                    <img src="static/project_4/piezo_shake.gif" alt="Looping animation 5" />
+                    <img src="static/project_4/piezo_shake_2.gif" alt="Looping animation 5" />
+                </div>
+        </div>
+    </div>  
+
+    <div class="container">
+        <h5 style="margin-top: 30px;" > 
+        3) Power Multiplexer
+        </h5>
+
+        <p class="mt-3">
+        We chose the TPS2113A power multiplexer to manage two input power sources ranging from 2.8V to 5.5V, with built-in reverse current blocking to protect each source.
+        The two inputs are:
+        </p>
+
+        <ol class="car_rule_list">
+            <li>
+                The bucked-down output from the solar-powered battery system
+            </li>
+            <li> 
+                The bucked-down output from the supercapacitors in the piezo energy system
+            </li>
+        </ol>
+
+        <p class="mt-3">
+            The TPS2113A automatically selects the input providing 
+            the higher voltage (and thus more power), ensuring that 
+            the sensor node is always powered by the most available 
+            and stable energy source at any given time.
+        </p>
+    </div>
+
+    <div class="container" style="margin-top: 2rem; margin-bottom: 2rem;">
+        <div class="content-wrapper">
+            <div class="education">
+                <h5>Circuit diagram</h5>
+                <ul>
+                    <li>
+                        Circuit diagram of Power Harvesting and Storage system and soldered circuit
+                    </li>
+                </ul>
+            </div>
+
+            <div class="visuals_400">
+                <div class="image-wrapper">
+                    <img src="static/project_4/circuit_diag_power.jpg" alt="Slide 2" class="fullscreen-img" />
+                    <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+                </div>    
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="visuals_2">
+                <div class="image-wrapper">
+                    <img src="static/project_4/soldered_circuit.jpg" alt="Slide 2" class="fullscreen-img" />
+                    <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+                </div>                   
+            </div>
+
+            <div class="education">
+                <h5>Soldered circuit</h5>
+                <ul>
+                    <li>
+                        Soldered circuit, incorporating boost/buck convertors,
+                        LTC3588 board, supercapacitors, power multiplexer, diodes,
+                        resistors
+                    </li>
+                </ul>
+            </div>
+
+            
+        </div>
+    </div>
+
+</section>
+
+<section id="cad">
+    <div class="container">
+        <h2>IoT Sensing & Data Management</h2>
+        <p class="mt-3">
+            We used ESP32 as the microcontroller, taking in pressure,
+            tempearature and humidity readings from BME280 sensor, and 
+            using LoRaWan module to transmit it to another ESP32 LoRaWan 
+            pair that acts as a receiver. We chose to use ESP32 as it was relatively
+            low powered and easy to work with since alot of documentation is 
+            available online. Though there are much low powered options available
+            but they tend to cost more.
+        </p>
+
+        <div class="content-wrapper">
+            <div class="visuals">
+                <img src="static/project_4/dashies_2.gif" alt="Looping animation 5" />
+                <img src="static/project_4/espies.gif" alt="Looping animation 5" />
+            </div>
+            
+            <div class="education">
+                <h5>ESP32 connected to LoRaWan and BME280</h5>
+                <ul>
+                    <li>
+                        Shows physical circuitry of ESP32 with components and 
+                        dashboard for showcasing of sensor readings (credits: to 
+                        my groupmates Sorenson and Aceline)
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+
+            <div class="education">
+                <h5>Circuit diagram</h5>
+                <ul>
+                    <li>
+                        Circuit diagram of ESP32 connected to BME280 and LoRaWan
+                    </li>
+                </ul>
+            </div>
+
+            <div class="visuals_400">
+                <div class="image-wrapper">
+                    <img src="static/project_4/esp_lora.jpg" alt="Slide 2" class="fullscreen-img" />
+                    <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+                </div>             
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="cad">
+    <div class="container" style="margin-bottom: 2rem;">
+        <h2>Enclosure & Form Factor</h2>
+        <p class="mt-3">
+            The Omni-Node is designed in two separate components: the piezo housing, 
+            which contains only the piezoelectric discs, and the main casing, which holds 
+            all other electronic components. During deployment, multiple piezo housings 
+            are mounted on the branches of a tree, while the main casing is secured to the trunk. 
+        </p>
+
+        <p class="mt-3">
+            Our primary focus was to ensure a modular design, allowing each functional 
+            component to be replaced independently. As a result, the sensor housing, 
+            piezo housings, and solar panel can all be easily swapped or upgraded 
+            without affecting the rest of the system.
+        </p>
+
+        <div class="content-wrapper">
+            <div class="visuals">
+                <img src="static/project_4/cases.gif" alt="Looping animation 5" />
+                <img src="static/project_4/cases_last.gif" alt="Looping animation 5" />
+            </div>
+            <div class="education">
+                <h5>The different phases of design</h5>
+                <ul>
+                    <li>
+                       Shows CAD models and physical model
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+{% endblock %}
+
+{% block navigation %}
+<!-- Navigation Section -->
+<section id="navigation-section" class="py-5">
+    <div class="container">
+        <!-- Back to Top Button (Above the Left and Right Buttons) -->
+        <div class="col-4 mb-4">
+
+            <a href="#top" class="btn custom-btn-left back-to-top">
+                ↑ Back to Top
+            </a>
+        </div>
+
+
+           <!-- Navigation Buttons (Left and Right) -->
+           <div class="navigation-buttons d-flex justify-content-between">
+            <a href="{{ url_for('views.project_3') }}#top" class="btn custom-btn-left">
+                ← SkyWatchHub
+            </a>
+            <a href="{{ url_for('views.project_1') }}#top" class="btn custom-btn-right">
+                Airlab/Blaster →
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,592 @@
+/* Global Styling */
+html, body {
+    height: 100%;
+    background: linear-gradient(to bottom right, #ffffff 50%, #e3e0e9 75%, #c3c3dd 100%);
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-padding-top: 10px; /* adjust to match your navbar height */
+
+  }
+  
+  /* Ensure main containers center their content using flexbox */
+  .content, .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Navbar Styling */
+  .side-navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    color: rgb(12, 11, 11);
+    padding: 20px;
+    z-index: 1050;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-container img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+  }
+
+  .logo-container a:hover {
+    background-color: #17508d00;
+  }
+  
+  .side-navbar a {
+    color: rgb(3, 3, 3);
+    text-decoration: none;
+    padding: 10px 12px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0 4px;
+  }
+  
+  .side-navbar .nav-links a:hover {
+    background-color: #b0bbc7;
+    border-radius: 5px;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    color: rgb(7, 7, 7);
+    border: none;
+    padding: 30px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: fixed;
+    top: 15px;
+    right: 10px;
+    z-index: 1051;
+    font-size: 30px;
+    background: transparent;
+  }
+  
+  /* Mobile Styling */
+  @media (max-width: 991px) {
+    .hamburger {
+      display: block;
+    }
+    .side-navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 10px;
+    }
+    .side-navbar.open .nav-links {
+      display: flex;
+    }
+    .content {
+      margin-top: 50px;
+      align-items: center;
+    }
+  }
+  
+  #about,
+  #projects,
+  #cv,
+  #contact {
+    scroll-margin-top: 90px;
+  }
+
+
+  /* Custom Hero Section */
+  .custom-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .typing-container {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    position: relative;
+    margin-top: 120px;
+  }
+  
+  .blinking-cursor {
+    border-right: 2px solid black;
+    animation: blink 0.7s step-end infinite;
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+  
+  .poppins {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-size: 21px;
+  }
+  
+  .hero-text {
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .hero-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 0px;
+  }
+
+  .inline-container {
+    display: flex;
+    flex-direction: row; /* Side by side by default */
+    align-items: center;
+    justify-content: center;
+    gap: 0px; /* Optional space between the text and image */
+    margin-left: 80px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 999px) {
+    .inline-container {
+      flex-direction: column; /* Stack vertically on small screens */
+      text-align: center;    /* Center text when stacked */
+      margin-left: 0px;
+      margin-top: 0px;
+    }
+
+    .typing-container {
+        margin-top: 80px;
+      }
+  }
+
+  .button-container {
+    margin-top: 15px;
+  }
+
+     /* cV: Container for the whole section */
+  #cv h2 {
+    font-size: 2.8rem;     /* Increase the size */
+    margin-bottom: 1rem;   /* Optional: adjust spacing */
+  }
+
+ #cv h5 {
+    font-size: 1.3rem;  /* or any size you prefer */
+    font-weight: bold; /* this makes the title bold */
+  }
+
+  #cv h6 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #444;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  #cv p, #cv ul{
+    font-size: 1.1rem;  /* or any size you prefer */
+  }
+
+  #cv .container {
+    max-width: 1000px;   /* limit width */
+    margin-left: auto;
+    margin-right: auto; /* center horizontally */
+    text-align: left;   /* better for reading lists */
+    padding: 0 1rem;    /* some horizontal padding */
+  }
+
+
+   /* Projects: Container for the whole section */
+  #projects {
+    padding: 3rem 0rem; /* ⬅️ reduce horizontal padding */
+    background: #f8f9fa00;
+  }
+
+  /* Center the section title */
+  #projects h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;       /* Make it bigger - adjust size as needed */
+  }
+
+  /* Flex container for cards */
+  .project-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* center cards when not full row */
+    gap: 1.5rem;
+  }
+
+  /* Each project card */
+  .project-card {
+    position: relative;
+    width: 100%;           /* responsive width */
+    max-width: 270px;      /* limit width */
+    height: 200px;
+    flex: 0 0 auto;        /* prevent stretching */
+    border-radius: 6px;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: flex-start; /* change from flex-end to flex-start */
+    padding: 13px;
+    flex-direction: column; /* add this to stack items vertically */
+  }
+
+  /* Background image wrapper (absolute) */
+  .image-wrapper {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 0;
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+  }
+
+  /* Card content */
+  .card-body {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0); /* transparent bg */
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-title {
+    font-size: 1.35rem;
+    margin-top: 0rem;     /* ⬅️ adjust this value */
+    font-weight: bold; /* this makes the title bold */
+  }
+
+  .card-text {
+    flex-grow: 1; /* push button down */
+    margin-bottom: 1rem;
+    color: #0c0b0b;
+  }
+
+  /* Styled button */
+  .btn-primary {
+    background-color: #0d6dfdd2;
+    border: none;
+    color: white;
+    padding: 0.3rem 0.8rem;  /* ⬅️ Smaller padding */
+    text-decoration: none;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 0.5rem;  /* extra space pushing it further down */
+
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: #0b5ed7;
+    text-decoration: none;
+    color: white;
+  }
+
+  .card-tags {
+    margin-top: 4.5rem;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+  
+  .tag {
+    background-color: rgba(255, 250, 250, 0.6);
+    color: rgb(0, 0, 0);
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    font-weight: 500;
+    font-weight: bold; /* this makes the title bold */
+  }
+
+
+  /*-- CSS for Timeline */
+  .timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: auto; /* Ensure the height is dynamic based on the content */
+    overflow: hidden; /* Prevent the line from overflowing */
+    }
+
+    /* Vertical Line */
+    .timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #6c757d;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%; /* Make sure it spans the full height of the timeline container */
+    }
+
+    /* Timeline Events */
+    .timeline-item {
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+    align-items: center;
+    }
+
+    /* Left Text */
+    .timeline-content {
+    text-align: right;
+    padding-right: 20px;
+    }
+
+    .timeline p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #444;
+      margin: 0;
+    }
+
+    #about p {
+      font-size: 1.1rem;
+    }
+
+    /* Right Image */
+    .timeline-image {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .timeline-image-wrapper {
+      width: 350px;       /* fixed width */
+      height: 250px;      /* fixed height, matching image width for square shape */
+      overflow: hidden;   /* crop any overflow */
+      border-radius: 8px; /* round corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px; /* or more if needed */
+    }
+    
+    .timeline-image-wrapper img.timeline-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* cover container, cropping if needed */
+      border-radius: 8px;
+      display: block;  /* optional but recommended */
+    }
+
+    /* Node Circle */
+    .timeline-node {
+    position: relative;
+    z-index: 1000;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border: 4px solid #6c757d;
+    border-radius: 50%;
+    margin: 0 auto;
+    }
+
+    /* Responsive for Smaller Screens */
+    @media (max-width: 991px) {
+    .timeline {
+        position: relative;
+    }
+
+    /* Move the line to the left */
+    .timeline::after {
+        left: 22px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        text-align: left;
+        padding-left: 40px;
+        position: relative;
+        
+    }
+
+    .timeline-content {
+        padding-left: 40px;
+        max-width: 600px; /* or any width you want */
+    }
+
+    /* Align nodes directly on the left line */
+    .timeline-node {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* Adjust text and image stacking */
+    .timeline-content {
+      text-align: left;
+      margin-top: 20px;
+      margin-bottom: 15px; /* space below text */
+
+    }
+  
+    .timeline-image {
+      text-align: left;
+      margin-top: 0;
+      display: block;
+    }
+
+    .timeline-image-wrapper {
+      margin-left: 40px; /* adds spacing from the left (i.e., the node) */
+    }
+  
+    #about p {
+      max-width: 600px;
+    }
+    .timeline-image-wrapper {
+      width: 400px;       /* fixed width */
+      height: 250px;   
+  }
+
+   .timeline-image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    }
+  }
+
+
+  @media (max-width: 500px) {
+
+    .timeline p {
+      font-size: 0.8rem;
+      line-height: 1.5;
+      font-weight: 400;
+      color: #444;
+      margin: 0;
+    }
+
+    .timeline {
+      padding: 0 40px 0 10px; /* increase right padding to 20px for spacing */
+    }
+  
+    .timeline::after {
+      left: 20px; /* Move vertical line closer to left edge */
+    }
+  
+    .timeline-item {
+      grid-template-columns: 1fr; /* Stack content vertically */
+      padding-left: 30px;
+      position: relative;
+    }
+  
+    .timeline-content {
+      text-align: left;
+      padding-left: 20px;
+    }
+  
+    .timeline-node {
+      position: absolute;
+      left: 4px;
+      top: 300px; /* adjust as needed */
+      transform: translateY(0);
+    }
+  
+    .timeline-image-wrapper {
+      width: 100%;
+      max-width: 100%;
+      margin-left: 20px;      
+      margin-top: 10px;
+      padding: 0;
+    }
+  
+    .timeline-image-wrapper img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    padding: 5rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-container {
+    max-width: 800px;
+    margin-top: -20px;
+    margin-bottom: -200px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .icon-btn, .icon-btn2 {
+    font-size: 1.1rem;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .icon-btn:hover, .icon-btn2:hover {
+    transition: transform 0.2s ease;
+    transform: scale(1.1);
+  }
+  
+  /* Footer */
+  footer {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  footer p {
+    margin: 10px auto;
+    text-align: center;
+  }
+  

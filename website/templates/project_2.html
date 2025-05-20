@@ -1,0 +1,322 @@
+{% extends 'base_project.html' %}
+
+{% block intro %}
+<section id="about">
+    <div class="container">
+        <h2>Mechanical-Powered Toy Car</h2>
+        <p>As part of an undergraduate project at the Singapore University of Technology and 
+            Design, students were challenged to design a car <strong>powered solely by mechanical energy</strong> 
+            to transport a 400g payload through an obstacle course. Additional marks were awarded 
+            to teams whose cars successfully completed the course.
+        </p>
+        
+        <div class="row">
+            <div class="column">
+                <h5>My Role</h5>
+                <p>In charge of CAD, design of mechanism</p>
+            </div>
+            <div class="column">
+                <h5>My Contribution</h5>
+                <p>CAD, Design of final car, Prototyping, Testing</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="column">
+                <h5>About the Team</h5>
+                <p>Team of 5 </p>
+            </div>
+            <div class="column">
+                <h5>Year</h5>
+                <p>2023</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="column">
+                <h5>Platform</h5>
+                <p>SolidWork, 3D printing</p>
+            </div>
+            <div class="column">
+                <h5>Time Frame</h5>
+                <p>1 semester (14 weeks)</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+{% block gallery %}
+<!-- Gallery -->
+<div class="photo-collage">
+    <div class="image-container">
+        <div class="image-wrapper">
+            <img src="static/project_2/gear_spinning.gif" alt="Slide 2" class="fullscreen-img" />
+            <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+        </div>             
+        <img src="static/project_2/testing_2.gif" alt="Looping animation 2" />
+    </div>
+
+    <div class="image-container">
+        <img src="static/project_2/course_2.gif" alt="Looping animation 2" />
+        <div class="image-wrapper">
+            <img src="static/project_2/car_5.jpg" alt="Slide 2" class="fullscreen-img" />
+            <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+        </div>  
+    </div>
+
+    <div class="image-container">
+        <img src="static/project_2/testing_car_2.gif" alt="Looping animation 2" />
+        <div class="image-wrapper">
+            <img src="static/project_2/car_4.jpg" alt="Slide 2" class="fullscreen-img" />
+            <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+        </div>  
+    </div>
+</div>
+<!-- Gallery -->
+{% endblock %}
+
+{% block section %}
+<!-- CAD Section-->
+<section id="cad"> 
+    <div class="container">
+        <h2>Project Rules</h2>
+        <p class="mt-3"> <strong>Objective</strong>: Design and build a mechanical energy powered toy car that can carry a load travelling across an
+            obstacle course, using the principles of classical mechanics. <strong>The rules 
+            are as follows:</strong>
+        </p>
+
+        <ol class="car_rule_list">
+        <li> The toy car must be able to carry a <strong>minimum 
+            load of 200 g (up to maximum of 400 g)</strong> in an open top compartment 
+            on board securely across an obstacle course within <strong>time 
+            limit of 10 sec</strong>. The loads come in 
+            pieces of 100 g each, with dimension of 3.2 cm x 3.2 cm x 3.5 cm
+        </li>
+        <li> 
+            The toy car must be <strong>no larger than 25 cm in length and 12 cm in width</strong> (no limit to height)
+        </li>
+        <li> 
+            The toy car must possess an <strong>on‐board mechanical energy source </strong>(no electrical energy or
+            chemical energy allowed)</li>
+        <li> 
+            All individual components in the toy car must be <strong>customed made</strong>(e.g. using 3D printing or
+            laser cutting of wooded or acrylic board) or salvaged as recycle parts
+        </li>
+        </ol>
+
+        <div class="content-wrapper">
+            <div class="education">
+                <h5>The obstacle course</h5>
+                <ul>
+                    <li>Images of illustrated track and actual track</li>
+                </ul>
+            </div>
+
+        <!-- Visuals Section 1 -->
+        <div class="visuals">
+            <img src="static/project_2/illustrated_course_2.gif" alt="Looping animation 4" />
+            <img src="static/project_2/course_3.gif" alt="Looping animation 4" />
+        </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Programming and electronics works Section-->
+<section id="cad">
+    <div class="container">
+        <h2>Design process</h2>
+        <p class="mt-3">
+            As a group, we researched and evaluated various mechanical energy 
+            sources suitable for the project requirements. The source needed 
+            to be compact, lightweight, and capable of storing sufficient energy. 
+            We calculated the potential energy each mechanism could store and 
+            estimated the theoretical energy required for the car to ascend 
+            the starting slope and overcome the obstacles along the course.
+        </p>
+
+        <h5 style="margin-top: 50px;" > First prototype: Using Spiral Torsion Spring</h5>
+        <p class="mt-3">
+            Using torsion spring, we had to maximise the number of wheel 
+            turns for every unwound distance of the torsion coil. Hence, we
+            decided to use gears for tranmission of energy from spring to wheel. 
+            Using gears meant we had to optimise the gear ratio which refers to:
+            <strong>Gear Ratio</strong> = (Teeth on Driven Gear) ÷ (Teeth on Driver Gear)
+        </p>
+        <p class="mt-3">
+        If a small gear turns a large gear, the larger gear will rotate more slowly,
+        but with more torque. The higher the gear ratio, the higher the torque, but speed decreases.
+        For example, if gear ratio is 3:1, the output has 3x more torque than input, but 1/3 speed.
+        We then had to optimise the gear ratio in accordance to the project requirements.
+        </p>
+
+        <!-- Visuals Section 2 -->
+        <div class="content-wrapper">
+        <div class="visuals">
+            <img src="static/project_2/prototype_1.gif" alt="Looping animation 5" />
+            <iframe src="static/project_2/prototype_1.html"></iframe>         
+        </div>
+
+            <div class="education">
+                <h5>Problems faced</h5>
+                <ul>
+                    <li>
+                        We found that the spring was very stiff, causing alot of pressure
+                        on the 3D printed parts when wound. The car did not move far 
+                        as we were unable to wind the coil. We also found that the car was very heavy, 
+                        and wheels were too wide, causing too much friction.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h5 style="margin-top: 20px;" > Next step</h5>
+        <p class="mt-3">
+            To solve the problems faced, we can use a smaller spring, 
+            to allow for easier winding of spring. We can also optimise the 
+            design of car to reduce weight. Though we felt the concept had potential,
+            due to the long delivery time of a new spring coil, we 
+            decided to switch to a mouse trap torsion spring which we had at hand. 
+            We took what we learned from the first prototype and implemented it
+            to the next prototype.
+        </p>
+
+    </div>
+
+    <!-- Second content block: Image 2 & CAD Works -->
+    <div class="container">
+    <div class="content-wrapper">
+        <div class="education">
+            <h5> Second Prototype: Using Mouse-trap Torsion Spring</h5>
+            <ul>
+                <li>We used a cotton string with one end tied to the torsion spring
+                    and the other to the gear axle: so when the torsion spring unwinds,
+                    it will turn the gears, moving the car forward
+                </li>
+            </ul>
+        </div>
+
+        <div class="visuals">
+            <iframe src="static/project_2/prototype_2.html"></iframe>    
+            <img src="static/project_2/prototype_2.gif" alt="Looping animation 5" />
+        </div>
+    </div>
+
+    <h5 style="margin-top: 20px;" > Problems faced and next step</h5>
+    <p class="mt-3">
+        We found that the car moved slowly due to heavy weight. Also, having 3 gears
+        caused there to be alot of friction, causing alot of force from the torsion 
+        spring to be ineffieciently transmitted to the rear wheels. Also, the mouse-trap
+        torsion spring did not exert enough force to carry 400g load up a 30 degree slope.
+        Hence, our next step was to 1) make the car lighter, 2) integrate more torsion springs,
+        3) Reduce number of gears while still maintaining optimal gear ratio.
+    </p>    
+
+    <!-- Second content block: Image 2 & CAD Works -->
+    <div class="content-wrapper">
+        <div class="visuals">
+            <img src="static/project_2/final_prototype.gif" alt="Looping animation 5" />
+            <iframe src="static/project_2/final_prototype.html"></iframe>    
+        </div>
+
+        <div class="education">
+            <h5> Final Prototype</h5>
+            <ul>
+                <li>
+                    Main improvements include 1) Uses 3 mouse trap torsion spring, 2)
+                    Much lighter than previous prototypes due to optimise design, 3) Smoother
+                    gear rotation when driving rear wheels.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Fourth content block -->
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="education">
+                <h5>Exploded view</h5>
+                <ul>
+                    <li>Made up of 27 parts, secured using m3 screws</li>
+                    <li>Parts included laser-cut wood, carbon rods, torsion spring,
+                        3D printed gears, wheels and other components
+                    </li>
+                </ul>
+            </div>
+
+            <div class="visuals">
+                <div class="image-wrapper">
+                    <img src="static/project_2/exploded_view.gif" alt="Slide 2" class="fullscreen-img" />
+                    <button class="fullscreen-btn" onclick="openFullscreen(this)">⛶</button>
+                </div>        
+            </div>
+        </div>
+    </div>  
+    
+</div>
+</section>
+
+<!-- Testimonial-->
+<section id="cad" style="margin-bottom: -10rem;">
+    <div class="container">
+        <h2>Our Toy-Car put to the test</h2>
+        <p class="mt-3">
+            After a full semester of working on the car,
+             it was time to put the it to the test........
+        </p>
+        <div class="content-wrapper">
+            <div class="visuals_car">
+                <img src="static/project_2/final_course.gif" alt="Looping animation 5" />
+            </div>
+            <div class="education">
+                <h5>Success!!</h5>
+                <ul>
+                    <li>After implementing improvements mentioned above, our car managed to complete 
+                        the course!!</li>
+                </ul>
+            </div>
+        </div>
+    <h5 style="margin-top: 40px;" >Findings and future improvements</h5>
+    <p class="mt-3">
+        We found that after a few runs, the torsion spring began to wear on some joints
+        due to the pressure it exerts when wounded up. A future improvement would be to 
+        reduce the amount of individual parts to ensure the car is more rigid, allowing
+        for more optimal force transmission from spring to wheels.
+    </p>
+    </div>
+</div>    
+</section>
+
+{% endblock %}
+
+{% block navigation %}
+<!-- Navigation Section -->
+<section id="navigation-section" class="py-5">
+    <div class="container">
+        <!-- Back to Top Button (Above the Left and Right Buttons) -->
+        <div class="col-4 mb-4">
+
+            <a href="#top" class="btn custom-btn-left back-to-top">
+                ↑ Back to Top
+            </a>
+        </div>
+
+
+           <!-- Navigation Buttons (Left and Right) -->
+           <div class="navigation-buttons d-flex justify-content-between">
+            <a href="{{ url_for('views.project_1') }}#top" class="btn custom-btn-left">
+                ← Airlab/Blaster
+            </a>
+            <a href="{{ url_for('views.project_3') }}#top" class="btn custom-btn-right">
+                SkyWatchHub →
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block stl %}
+ <!-- Import the custom STL viewer script -->
+ {% endblock %}
